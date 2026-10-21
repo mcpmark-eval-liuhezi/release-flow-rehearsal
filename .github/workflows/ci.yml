@@ -1,0 +1,16 @@
+name: Checklist CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the release checklist steps
+        run: |
+          echo "1. Bump the version number"
+          echo "2. Update the changelog"
+          echo "3. Run the full test suite"
+          echo "4. Tag the release"
